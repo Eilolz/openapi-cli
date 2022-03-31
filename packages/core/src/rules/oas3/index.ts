@@ -45,6 +45,7 @@ import { PathExcludesPatterns } from '../common/path-excludes-patterns';
 import { NoInvalidSchemaExamples } from '../common/no-invalid-schema-examples';
 import { NoInvalidParameterExamples } from '../common/no-invalid-parameter-examples';
 import { ResponseContainsHeader } from '../common/response-contains-header';
+import { ResponseContainsProperty } from './response-contains-property';
 
 export const rules = {
   spec: OasSpec,
@@ -94,6 +95,7 @@ export const rules = {
   'no-invalid-schema-examples': NoInvalidSchemaExamples,
   'no-invalid-parameter-examples': NoInvalidParameterExamples,
   'response-contains-header': ResponseContainsHeader,
+  'response-contains-property': ResponseContainsProperty,
 } as Oas3RuleSet;
 
 export const preprocessors = {};

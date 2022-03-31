@@ -172,5 +172,5 @@ export function isNotEmptyObject(obj: any) {
   return !!obj && Object.keys(obj).length > 0;
 }
 
-export const generalizeResponseStatusCode = (code: number | string): string =>
+export const getMatchingStatusCodeRange = (code: number | string): string =>
   `${code}`.replace(/^(\d)\d\d$/, (_, firstDigit) => `${firstDigit}xx`);
