@@ -26,6 +26,7 @@ describe('push', () => {
       entrypoint: 'spec.json',
       destination: '@org/my-api@1.0.0',
       branchName: 'test',
+      'public': true
     });
 
     expect(redoclyClient.registryApi.prepareFileUpload).toBeCalledTimes(1);
@@ -34,6 +35,7 @@ describe('push', () => {
       branch: 'test',
       filePaths: ['filePath'],
       isUpsert: true,
+      isPublic: true,
       name: 'my-api',
       organizationId: 'org',
       rootFilePath: 'filePath',
