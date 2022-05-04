@@ -87,6 +87,7 @@ destination      | string    | Required. The location in the API registry where 
 --upsert, -u | boolean | Optional. Upsert an API to the API registry. See [the Upsert an API with push section](#upsert-an-api-with-push) for more information.  |
 --version     | boolean | Optional. Show version number.  |
 --region,-r    | string | Optional. Specify which region to use when logging in. Supported values: `us`, `eu`. Default value is `us`. Read more about [configuring the region](../configuration/configuration-file.mdx#region).
+--public       | boolean | Optional. Make API definition public accessible from API Registry. Read more about [public option](#public). |
 
 ## Examples
 
@@ -261,6 +262,15 @@ openapi push openapi/petstore.yaml @openapi-org/petstore-api@v1 --skip-decorator
 openapi push openapi/petstore.yaml @openapi-org/petstore-api@v1 --skip-decorator=test/remove-internal-operations --skip-decorator=test/remove-internal-schemas
 ```
 
+### Public
+
+The `--public` option allows upload your API definition and make it public from API Registry. By default, it's not available to the public.
+For more information check [registry access](../../../api-registry/settings/manage-access/#set-up-access-to-api-registry) section.
+
+```bash
+openapi push openapi/petstore.yaml @openapi-org/petstore-api@v1 --public
+```
+
 ### Set up CI from Redocly Workflows
 
 The Redocly Workflows interface can help you get started with the `push` command.
@@ -273,4 +283,4 @@ The Redocly Workflows interface can help you get started with the `push` command
 
 - Video tutorial: Using the OpenAPI CLI push command:
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/key2NGkcR5g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/key2NGkcR5g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

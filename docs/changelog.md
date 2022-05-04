@@ -4,6 +4,14 @@ tocMaxDepth: 2
 
 # OpenAPI CLI changelog
 
+## 1.0.0-beta-95 (2022-05-04)
+
+### Features
+
+- Added `--public` option to the `push` command. Allows upload OpenAPI definition and make it public accessible.    
+
+---
+
 ## 1.0.0-beta-94 (2022-04-12)
 
 ### Features
